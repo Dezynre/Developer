@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Tip calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <picture class="logo">
+    <img src="./images/logo.svg" alt="logo">
+  </picture>
+  <section class="wrapper">
+      <form class="in_form">
+        <section>
+          <p>Bill</p>
+          <div class="bill_wrapper">
+            <img src="./images/icon-dollar.svg" alt="dollar icon">
+            <input type="text" id="bill">
+          </div>
+        </section>
+        <section>
+          <p class="select_tip">Select Tip %</p>
+          <div class="tip_selection_area">
+            <button type="button" id="tr5">5%</button>
+            <button type="button" id="tr10">10%</button>
+            <button type="button" id="tr15">15%</button>
+            <button type="button" id="tr25">25%</button>
+            <button type="button" id="tr50">50%</button>
+            <input type="text" placeholder="Custom" id="custom">
+          </div>
+        </section>
+        <section class="number_of_people_main_wrapper">
+          <div class="label">
+            <p>Number of people</p>
+            <p class="red" id="zero_alert">Can't be zero</p>
+          </div>
+          <div class="number_of_people_wrapper">
+            <img src="./images/icon-person.svg" alt="person icon">
+            <input type="text" id="number_of_people">
+          </div>
+        </section>
+      </form>
+      <form class="out_form">
+        <section>
+          <section class="result">
+            <div>
+              <p class="white">Tip Amount</p>
+              <p class="light_grayish_cyan per_person">/ person</p>
+            </div>
+            <div class="real">
+              <img src="./images/icon-dollar-cyan.svg" alt="dollar sign">
+              <p class="result strong_cyan" id="tip_amount_per_person">0.00</p>
+            </div>
+          </section>
+          <section class="result">
+            <div>
+              <p class="white">Total</p>
+              <p class="light_grayish_cyan per_person">/ person</p>
+            </div>
+            <div class="real">
+              <img src="./images/icon-dollar-cyan.svg" alt="dollar sign">
+              <p class="result strong_cyan" id="total_per_person">0.00</p>
+            </div>
+          </section>
+        </section>
+        <button id="reset">RESET</button>
+      </form>
+  </section>
+  <script src="./script.js"></script>
+</body>
+</html>

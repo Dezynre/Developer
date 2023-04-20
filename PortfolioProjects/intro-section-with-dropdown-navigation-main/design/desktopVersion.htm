@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro-section-with-dropdown-navigation-mobileVersion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Tangerine&display=swap" rel="stylesheet">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Epilogue', sans-serif;
+        }
+        body {
+            background-color: hsl(0, 0%, 95%);
+            width: 100vw;
+        }
+        img {
+            max-width: 100%;
+        }
+        picture {
+            display: block;
+        }
+        /*Navigation Menu*/
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 1em 3em;
+        }
+        .logo_wrapper {
+            width: 90px;
+            position: relative;
+            top: 4px;
+        }
+        .nav_links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+        .nav_links_1 {
+            padding-left: 1.5em;
+        }
+        .nav_links_2 {
+            margin-left: auto;
+        }
+        .nav_links li {
+            padding: 0 1em;
+        }
+        .nav_links li a {
+            text-decoration: none;
+            color: hsl(0, 0%, 41%);
+        }
+        .nav_links li a:hover{
+            color: hsl(0, 0%, 8%);
+        }
+        .menu_icon_wrapper {
+            display: none;
+        }
+        .register {
+            border: 2px solid hsl(0, 0%, 41%);
+            padding: .6em 1em;
+            border-radius: 7px;
+        }
+        .hero {
+            display: flex;
+            padding: 2em 6em;
+        }
+        .hero_text {
+            order: 1;
+            flex-grow: 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 6em;
+            padding-top: 3em;
+        }
+        .hero_image {
+            order: 2;
+            min-width: 350px;
+            width: 40%;
+        }
+        .hero_text h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+        }
+        .hero_text p {
+            font-size: 1.2em;
+            padding-right: 15em;
+            color: hsl(0, 0%, 41%);
+        }
+        .hero_text a {
+            text-decoration: none;
+            background-color: hsl(0, 0%, 8%);
+            color: hsl(0, 0%, 98%);
+            padding: .7em 1em;
+            width: 170px;
+            text-align: center;
+            border-radius: 7px;
+        }
+        .clients {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .clients picture {
+            width: 100px;
+        }
+        footer {
+            margin-top: 3em;
+            padding: 1em;
+        }
+        .attribution {
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+        }
+         /*Reusable CSS*/
+         /*FLEXBOX*/
+         .flex{
+            display: flex;
+        }
+
+        .flex_direction_column {
+            flex-direction: column;
+        }
+
+        .flex_direction_row {
+            flex-direction: row;
+        }
+        .justify_content_flex_start {
+            justify-content: flex-start;
+        }
+        .justify_content_flex_center{
+            justify-content: center;
+        }
+        .justify_content_flex_end {
+            justify-content: flex-end;
+        }
+        .align_items_center {
+            align-items: center;
+        }
+        /*LISTS*/
+        .list_style_none {
+            list-style: none;
+        }
+        /*DISPLAY*/
+        .display_none {
+            display: none;
+        }
+        /*POSITION*/
+        .position_absolute {
+            position: absolute;
+        }
+        .position_relative {
+            position: relative;
+        }
+        .position_fixed {
+            position: fixed;
+        }
+        .position_static {
+            position: static;
+        }
+        .position_sticky {
+            position: sticky;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown_content {
+            background-color: rgb(240,240,240);
+            min-width: 200px;
+            min-height: 150px;
+            padding-left: 1em;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            top: 105%;
+            border-radius: 5px;
+            display: none;
+        }
+        .dropdown_content li picture {
+            width: 40px;
+            padding-right: 1px;
+        }
+        .dropdown_content li {
+            padding-top: 7px;
+            justify-content: flex-start;
+        }
+        .dropdown:hover .dropdown_content {display: block;}
+    </style>
+</head>
+<body>
+    <!--Navigation Section-->
+    <nav>
+        <picture class="logo_wrapper">
+            <img src="../images/logo.svg" alt="logo">
+        </picture>
+        <ul class="nav_links nav_links_1">
+            <li class="position_relative dropdown"><a href="#">
+                <span class="dropdown_button">Features</span>
+                <img class="caret_image" src="../images/icon-arrow-down.svg" alt="icon">
+                <ul class="list_style_none position_absolute dropdown_content">
+                    <li class="flex flex_direction_row caret_control">
+                        <picture><img src="../images/icon-todo.svg" alt=""></picture>
+                        <a href="#">Todo List</a>
+                    </li>
+                    <li class="flex flex_direction_row">
+                        <picture><img src="../images/icon-calendar.svg" alt=""></picture>
+                        <a href="#">Calendar</a>
+                    </li>
+                    <li class="flex flex_direction_row">
+                        <picture><img src="../images/icon-reminders.svg" alt=""></picture>
+                        <a href="#">Reminders</a>
+                    </li>
+                    <li class="flex flex_direction_row">
+                        <picture><img src="../images/icon-planning.svg" alt=""></picture>
+                        <a href="#">Planning</a>
+                    </li>
+                </ul>
+            </a></li>
+            <li class="position_relative dropdown"><a href="#">
+                <span class="dropdown_button">Company</span>
+                <img class="caret_image" src="../images/icon-arrow-down.svg" alt="icon">
+                <ul class="list_style_none position_absolute dropdown dropdown_content">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <ul class="nav_links nav_links_2">
+            <li><a href="#">Login</a></li>
+            <li><a href="#" class="register">Register</a></li>
+        </ul>
+        <section class="menu_icon_wrapper">
+            <img src="../images/icon-menu.svg" alt="menu icon">
+        </section>
+    </nav>
+
+    <!--Hero Section-->
+    <section class="hero">
+        <!--hero image-->
+        <picture class="hero_image"> 
+            <img src="../images/image-hero-desktop.png" alt="hero image">
+        </picture>
+
+        <!--hero text-->
+        <section class="hero_text">
+            <h1>Make remote work</h1>
+            <p>
+                Get your team in sync, no matter your location. Streamline processes, 
+                create team rituals, and watch productivity soar.
+            </p>
+            <a href="#">Learn More</a>
+            <section class="clients">
+                <picture><img src="../images/client-databiz.svg" alt="databiz"></picture>
+                <picture><img src="../images/client-audiophile.svg" alt="audiophile"></picture>
+                <picture><img src="../images/client-meet.svg" alt="meet"></picture>
+                <picture><img src="../images/client-maker.svg" alt="maker"></picture>
+            </section>
+        </section>
+        <!--client's subsection-->
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Chacha Ian</a>.
+          </div>
+    </footer>
+
+    <script>
+        let caret_image = document.querySelectorAll(".caret_image")
+        let dropdown_content = document.querySelectorAll(".dropdown_content")
+        for(let index=0; index<dropdown_content.length; index+=1) {
+            dropdown_content[index].addEventListener("click", (event)=>{
+                if(event.target.style.display=="block") {
+                    document.querySelector(".caret_image").src="../images/icon-arrow-up.svg"
+                } else if(event.target.style.display=="none") {
+                    document.querySelector(".caret_image").src="../images/icon-arrow-down.svg"
+                }
+            })
+        }
+    </script>
+</body>
+</html>

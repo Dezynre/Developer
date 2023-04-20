@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Abel', sans-serif;
+	box-sizing: border-box;
+	color: black;
+	letter-spacing: 2px;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, picture {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF RESET */
+
+body {
+	background-color: rgb(233, 228, 228);
+}
+
+nav {
+	height: 11vh;
+	padding: 0 1.7em;
+	display: flex;
+	align-items: center;
+	background: rgb(34,193,195);
+	background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+nav h1 {
+	font-size: 1.4em;
+	margin-left: .8em;
+	color: rgb(0,0,0);
+	font-weight: bold;
+	font-family: 'Architects Daughter', cursive;
+}
+nav ul {
+	position: absolute;
+	top: 5vh;
+	width: 100vw;
+	left: 0;
+	right: 0;
+	padding-left: 1.7em;
+	background-color: #2BC0BC;
+	height: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.ul_responsive {
+	position: absolute;
+	top: 11vh;
+	width: 100vw;
+	left: 0;
+	right: 0;
+	padding-left: 1.7em;
+	background-color: #2BC0BC;
+	padding-bottom: 1em;
+	height: auto;
+	z-index: 0;
+}
+
+nav ul a {
+	text-decoration: none;
+	color: rgb(40,40,40);
+	display: inline-block;
+	font-size: 1.2em;
+	margin-top: .9em;
+	font-weight: 600;
+}
+
+nav ul a:hover {
+	text-decoration: underline;
+}
+
+.logo {
+	width: 35px;
+}
+
+.menu {
+	width: 35px;
+	margin-left: auto;
+	margin-right: 10;
+}
+img {
+	max-width: 100%;
+}
+
+/* Main Section Styles */
+main {
+	position: relative;
+	top: 11vh;
+	z-index: -1;
+	padding: 1em 0;
+}
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1.7em;
+}
+
+.hero h2 {
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align: center;
+	padding: .5em 0;
+}
+
+.hero p {
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align: center;
+	padding: .5em 0;
+}
+
+.avatar {
+	display: block;
+	width: 300px;
+}
+.avatar img {
+	border-radius: 50%;
+}
+
+.inPageLink {
+	color: #2BC0BC;
+	text-decoration: none;
+}
+
+.font1_3_em {
+	font-size: 1.3em;
+	text-align: center;
+	display: block;
+	text-align: center;
+}
+
+.inPageLink:hover {	
+	text-decoration: underline;
+}
+
+.portfolio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1em 0;
+	padding: 1em 1.7em;
+}
+
+.portfolio picture {
+	width: 80vw;
+	border: 2px solid #2BC0BC;
+	margin: .5em 0;
+	padding: .7em;
+	border-radius: 5px;
+}
+
+.portfolio picture p {
+	padding: .4em 0;
+	font-size: 1.3em;
+}
+
+.portfolio_h2 {
+	font-weight: 700;
+	font-size: 1.5em;
+	padding: .6em 0;
+	text-align: center;
+	margin-top: 1em;
+}
+.testimonials {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1em 0;
+	background-color: #2BC0BC;
+	padding: 0 1.7em;
+	padding-bottom: 1em;
+}
+
+.testimonial_avatar {
+	width: 150px;
+	height: 150px;
+}
+.testimonial_avatar img {
+	height: 100%;
+	border-radius: 50%;
+}
+.quote {
+	width: 60px;
+}
+.quote img {
+	width: 100%;
+}
+.testimonials p {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Tangerine', cursive;
+}
+.testimonials h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 1em 0;
+}
+.testimonials h3 {
+	font-size: 1.4em;
+	padding: .4em;
+	font-family: 'Tangerine', cursive;
+}
+@media screen and (min-width: 900px) {
+	.menu {
+		display: none;
+	}
+
+	nav ul {
+		position: static;
+		z-index: 1;
+		width: 50vw;
+		height: 80%;
+		display: flex;
+		align-items: flex-start;
+		margin-left: auto;
+		justify-content: space-around;
+		padding: 0;
+		background-color: transparent;
+	}
+	nav ul li a {
+		font-size: 1.3em;
+		font-weight: 600;
+	}
+
+	.avatar {
+		width: 400px;
+	}
+}
+
+@media screen and (min-width: 741px) {
+	.portfolio {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.portfolio picture {
+		flex-basis: 300px;
+	}
+}

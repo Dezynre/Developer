@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    font-size: 24px;
+    padding-bottom: 3em;
+}
+
+.red {
+    color: red;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo img {
+    display: block;
+    width: 60px;
+}
+
+.wrapper {
+    border-radius: 15px;
+    display: grid;
+    background-color: hsl(0, 0%, 100%);
+    width: 60%;
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+form {
+    padding: 1em;
+    display: block;
+}
+
+.in_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill_wrapper {
+    position: relative;
+}
+
+.bill_wrapper img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: .5em;
+    width: .7em;
+}
+
+.bill_wrapper input {
+    width: 100%;
+    height: 100%;
+    padding: .3em;
+    border-radius: 7px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: inherit;
+    border: 1px solid hsl(185, 41%, 84%);
+}
+
+.tip_selection_area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5em;
+}
+
+.select_tip {
+    margin-top: 1em;
+}
+
+#tr5, #tr10, #tr15, #tr25, #tr50 {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    display: block;
+}
+
+#tr5:hover, #tr10:hover, #tr15:hover, #tr25:hover, #tr50:hover {
+    cursor: pointer;
+}
+
+#tr5, #tr10, #tr15, #tr25, #tr50, #custom {
+    border-radius: 5px;
+    padding: .3em;
+    display: block;
+    width: 100px;
+    font-size: inherit;
+}
+
+#custom {
+    background-color: hsl(189, 41%, 97%);
+    border: 1px solid hsl(185, 41%, 84%);
+    text-align: right;
+    font-size: 20px;
+}
+
+.number_of_people_main_wrapper {
+    border: none;
+    margin-top: 1em;
+}
+
+.number_of_people_main_wrapper .label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number_of_people_wrapper {
+    position: relative;
+}
+
+.number_of_people_wrapper img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: .5em;
+    width: .7em;
+}
+
+.number_of_people_wrapper input {
+    width: 100%;
+    height: 100%;
+    padding: .3em;
+    border-radius: 6px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: inherit;
+    border: 1px solid hsl(185, 41%, 84%);
+}
+
+.out_form {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em 1em;
+}
+
+.white {
+    color: hsl(0, 0%, 100%);
+}
+
+.light_grey_cyan {
+    color: hsl(189, 41%, 97%);
+}
+
+.light_grayish_cyan {
+    color: hsl(185, 41%, 84%);
+}
+
+.grayish_cyan {
+    color: hsl(184, 14%, 56%);
+}
+
+.dark_grayish_cyan {
+    color: hsl(186, 14%, 43%);
+}
+
+.strong_cyan {
+    color: hsl(172, 67%, 45%);
+}
+
+#reset {
+    width: 100%;
+    padding: .3em;
+    font-weight: 600;
+    border: none;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 7px;
+    font-size: inherit;
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+}
+
+
+#zero_alert {
+    font-size: 17px;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .3em 0;
+    align-items: center;
+}
+
+#reset:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.real {
+    display: flex;
+    flex-direction: row;
+}
+.real img {
+    width: 20px;
+    align-self: center;
+}
+.real p {
+    font-size: 45px;
+    font-weight: 500;
+    align-self: center;
+    padding-left: .2em;
+}
+.per_person {
+    font-size: 18px;
+}
+
+.tip_selection_area, .number_of_people_wrapper {
+    margin-top: .5em;
+}

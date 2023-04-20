@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro-section-with-dropdown-navigation-mobileVersion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Tangerine&display=swap" rel="stylesheet">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Epilogue', sans-serif;
+        }
+        body {
+            background-color: hsl(0, 0%, 98%);
+            width: 100vw;
+        }
+        img {
+            max-width: 100%;
+        }
+        /*Navigation Menu*/
+        nav {
+            width: 100vw;
+            height: 10vh;
+            padding: 0 1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo_wrapper {
+            width: 60px;
+        }
+        /* Hero Section */
+        .hero {
+            margin-top: 1em;
+        }
+        .hero_image {
+            display: block;
+            width: 100%;
+        }
+        .hero_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+            padding: 0 1em;
+        }
+        .hero_text h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: hsl(0, 0%, 8%);
+        }
+        .hero_text p {
+            text-align: center;
+            color: hsl(0, 0%, 41%);
+            margin-top: 1.5em;
+            max-width: 425px;
+        }
+        .hero_text a {
+            text-decoration: none;
+            background-color: hsl(0, 0%, 8%);
+            color: hsl(0, 0%, 98%);
+            padding: .6em 1em;
+            border-radius: 8px;
+            margin-top: 1.5em;
+            font-size: 18px;
+        }
+        .clients {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2em;
+        }
+        .clients picture {
+            display: block;
+            width: 15vw;
+        }
+        footer {
+            padding: 1.7em 1em;
+        }
+        .attribution {
+            text-align: center;
+            font-style: italic;
+            font-size: 13px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!--Navigation Section-->
+    <nav>
+        <picture class="logo_wrapper">
+            <img src="../images/logo.svg" alt="logo">
+        </picture>
+        <section>
+            <img src="../images/icon-menu.svg" alt="menu icon">
+        </section>
+    </nav>
+
+    <!--Hero Section-->
+    <section class="hero">
+        <!--hero image-->
+        <picture class="hero_image"> 
+            <img src="../images/image-hero-mobile.png" alt="hero image">
+        </picture>
+
+        <!--hero text-->
+        <section class="hero_text">
+            <h1>Make remote work</h1>
+            <p>
+                Get your team in sync, no matter your location. Streamline processes, 
+                create team rituals, and watch productivity soar.
+            </p>
+            <a href="#">Learn More</a>
+            <section class="clients">
+                <picture><img src="../images/client-databiz.svg" alt="databiz"></picture>
+                <picture><img src="../images/client-audiophile.svg" alt="audiophile"></picture>
+                <picture><img src="../images/client-meet.svg" alt="meet"></picture>
+                <picture><img src="../images/client-maker.svg" alt="maker"></picture>
+            </section>
+        </section>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Chacha Ian</a>.
+          </div>
+    </footer>
+</body>
+</html>

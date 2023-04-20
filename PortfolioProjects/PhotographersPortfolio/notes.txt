@@ -1,0 +1,14 @@
+Elments of a photographer' website
+
+About
+Gallery
+Features
+Testimonials
+Contacts
+
+
+Navigation
+
+About
+Gallery
+Contacts

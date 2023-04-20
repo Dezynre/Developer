@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 95vw;
+            margin: 0 auto;
+            padding: 1em;
+        }
+        .accordion button {
+            width: 100%;
+            padding: .7em 1em;
+            font-weight: 600;
+            text-align: left;
+            background-color: bisque;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .panel {
+            background-color: rgb(230,230,230);
+            height: 0;
+            overflow: hidden;
+        }
+        .shown {
+            height: auto;
+            padding: .7em 1em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <section class="accordion">
+            <button>Link 1</button>
+            <p class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione adipisci repudiandae id nisi velit mollitia ducimus, quis voluptatibus voluptas libero magnam iste dolore. Libero cumque distinctio dolores autem tenetur porro.</p>
+        </section>
+        <section class="accordion">
+            <button>Link 2</button>
+            <p class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione adipisci repudiandae id nisi velit mollitia ducimus, quis voluptatibus voluptas libero magnam iste dolore. Libero cumque distinctio dolores autem tenetur porro.</p>
+        </section>
+        <section class="accordion">
+            <button>Link 3</button>
+            <p class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione adipisci repudiandae id nisi velit mollitia ducimus, quis voluptatibus voluptas libero magnam iste dolore. Libero cumque distinctio dolores autem tenetur porro.</p>
+        </section>
+    </section>
+    <script>
+            let accordion = document.querySelectorAll(".accordion button");
+            for(let i=0; i<document.querySelectorAll(".accordion button").length;i+=1) {
+                document.querySelectorAll(".accordion button")[i].classList.toggle("shown")
+            }
+    </script>
+</body>
+</html>
